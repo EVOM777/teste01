@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style type="text/tailwindcss">
@@ -104,8 +104,9 @@
     </header>
 
     <main class="pt-20">
+        
         <section class="hero-section">
-             <div class="absolute inset-0 -z-10 bg-[radial-gradient(40%_50%_at_50%_20%,#a7f3d0_0%,transparent_100%)]"></div>
+            <div class="absolute inset-0 -z-10 bg-[radial-gradient(40%_50%_at_50%_20%,#a7f3d0_0%,transparent_100%)]"></div>
             <div class="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
                 <div class="text-center lg:text-left">
                     <h1 class="hero-title">
@@ -116,18 +117,30 @@
                         Acesse uma nova experiência em plano de saúde. Agende consultas, veja seus exames e fale com especialistas na palma da sua mão.
                     </p>
                     <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#" class="btn-primary-lg">Fale conosco <a href="#boleto-section" class="font-semibold text-emerald-600 hover:underline">Mensalidade em atraso.</a>
-                    </p>
+                        <a href="#" class="btn-primary-lg">Fale conosco</a>
+                        <a href="#boleto-section" class="btn-secondary-lg">Mensalidade em atraso</a>
+                    </div>
                 </div>
                 
-                <div class="relative lg:-mr-8">
+                <div class="relative hidden lg:block">
+                    <img 
+                        src="med1.png.jpeg" 
+                        alt="Imagem de um médico sorrindo" 
+                        class="absolute top-0 right-0 w-2/3 rounded-xl shadow-lg transform rotate-6"
+                    >
+                    <img 
+                        src="med2.png.jpeg" 
+                        alt="Aplicativo de saúde em um celular" 
+                        class="relative z-10 w-4/5 mx-auto rounded-xl shadow-2xl transform -rotate-3"
+                    >
+                    <img 
+                        src="med3.png.jpeg" 
+                        alt="Paciente feliz em uma consulta online" 
+                        class="absolute bottom-[-1rem] left-0 w-1/2 rounded-xl shadow-xl transform rotate-3 border-4 border-white"
+                    >
                 </div>
-            </div>
+                </div>
         </section>
-
-            </div>
-        </section>
-        
         <section id="boleto-section" class="py-20 px-6 bg-slate-100 pattern-bg">
             <div class="container mx-auto max-w-3xl">
                 <div class="group bg-white rounded-2xl shadow-lg border border-slate-100 p-8 text-center flex flex-col md:flex-row items-center gap-8 transition-all duration-300 hover:shadow-xl">
@@ -162,32 +175,47 @@
         </section>
 
         <section id="plans" class="py-20 px-6 bg-white">
-             <div class="container mx-auto text-center">
-                <h2 class="section-title">Planos que cabem na sua vida</h2>
-                <p class="section-subtitle">Escolha o plano ideal com a cobertura que você precisa.</p>
-                <div class="mt-12 grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                    <article class="plan-card">
-                        <h3 class="text-xl font-bold">Digital</h3>
-                        <p class="mt-1 text-slate-500">O essencial para quem vive conectado.</p>
-                        <ul class="text-slate-600 text-left my-6 flex-1 space-y-2"><li>✔ Telemedicina ilimitada</li><li>✔ Cobertura para exames</li></ul>
-                        <a href="#" class="btn-outline mt-auto w-full">Saber Mais</a>
-                    </article>
-                    <article class="plan-card plan-card-highlight">
-                        <span class="plan-badge">MAIS ESCOLHIDO</span>
-                        <h3 class="text-xl font-bold">Equilíbrio</h3>
-                        <p class="mt-1 text-slate-500">Custo-benefício para a família.</p>
-                        <ul class="text-slate-600 text-left my-6 flex-1 space-y-2"><li>✔ Tudo do plano Digital</li><li>✔ Consultas presenciais</li><li>✔ Internação</li></ul>
-                        <a href="#" class="bg-gradient-to-br from-emerald-500 to-emerald-600 text-white font-semibold py-3 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition w-full mt-auto">Contratar Agora</a>
-                    </article>
-                    <article class="plan-card">
-                        <h3 class="text-xl font-bold">Total</h3>
-                        <p class="mt-1 text-slate-500">Cobertura completa e exclusiva.</p>
-                        <ul class="text-slate-600 text-left my-6 flex-1 space-y-2"><li>✔ Tudo do plano Equilíbrio</li><li>✔ Hospitais premium</li><li>✔ Reembolso</li></ul>
-                        <a href="#" class="btn-outline mt-auto w-full">Saber Mais</a>
-                    </article>
-                </div>
-            </div>
-        </section>
+    <div class="container mx-auto text-center">
+        <h2 class="section-title">Planos que cabem na sua vida</h2>
+        <p class="section-subtitle">Escolha o plano ideal com a cobertura que você precisa.</p>
+        
+        <div class="mt-12 grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <article class="plan-card">
+                <h3 class="text-xl font-bold">Digital</h3>
+                <p class="mt-1 text-slate-500">O essencial para quem vive conectado.</p>
+                <ul class="text-slate-600 text-left my-6 flex-1 space-y-2">
+                    <li>✔ Telemedicina ilimitada</li>
+                    <li>✔ Cobertura para exames</li>
+                </ul>
+                <a href="#" class="btn-outline mt-auto w-full">Saber Mais</a>
+            </article>
+            <article class="plan-card plan-card-highlight">
+                <span class="plan-badge">MAIS ESCOLHIDO</span>
+                <h3 class="text-xl font-bold">Equilíbrio</h3>
+                <p class="mt-1 text-slate-500">Custo-benefício para a família.</p>
+                <ul class="text-slate-600 text-left my-6 flex-1 space-y-2">
+                    <li>✔ Tudo do plano Digital</li>
+                    <li>✔ Consultas presenciais</li>
+                    <li>✔ Internação</li>
+                </ul>
+                <a href="#" class="bg-gradient-to-br from-emerald-500 to-emerald-600 text-white font-semibold py-3 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition w-full mt-auto">Contratar Agora</a>
+            </article>
+            <article class="plan-card">
+                <h3 class="text-xl font-bold">Total</h3>
+                <p class="mt-1 text-slate-500">Cobertura completa e exclusiva.</p>
+                <ul class="text-slate-600 text-left my-6 flex-1 space-y-2">
+                    <li>✔ Tudo do plano Equilíbrio</li>
+                    <li>✔ Hospitais premium</li>
+                    <li>✔ Reembolso</li>
+                </ul>
+                <a href="#" class="btn-outline mt-auto w-full">Saber Mais</a>
+            </article>
+        </div>
+
+        <img src="med3.png.jpeg" alt="Um médico sorrindo" class="mx-auto block w-80 h-auto rounded-xl border-4 border-emerald-400 shadow-lg p-1 bg-white mt-16">
+
+    </div>
+</section>
 
         <section id="testimonials" class="py-20 px-6 bg-slate-50">
             <div class="container mx-auto text-center">
