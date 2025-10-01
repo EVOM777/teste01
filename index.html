@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HF Saúde Verde — Planos de Saúde, Inovação e Cuidado Completo</title>
+    <title>Medsenior - Atendimento Online</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -49,6 +49,25 @@
         .pattern-bg {
             background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g fill="%23a7f3d0" fill-opacity="0.1" fill-rule="evenodd"><circle cx="3" cy="3" r="3"/><circle cx="13" cy="13" r="3"/></g></svg>');
         }
+        #cookie-consent-banner {
+            display: none; /* Inizialmente nascosto */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: #334155;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+        #cookie-consent-banner .btn-container {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased" style="font-family: 'Inter', sans-serif;">
@@ -56,8 +75,8 @@
     <header class="header">
         <div class="container mx-auto px-6 py-4 flex items-center justify-between">
             <a href="#" class="flex items-center gap-2" aria-label="Página Inicial">
-                <div class="w-9 h-9 rounded-lg bg-emerald-500 flex items-center justify-center text-white font-bold text-lg">H</div>
-                <span class="text-xl font-bold text-slate-800">HF Saúde Verde</span>
+                <div class="w-9 h-9 rounded-lg bg-emerald-500 flex items-center justify-center text-white font-bold text-lg">M</div>
+                <span class="text-xl font-bold text-slate-800">Atendimento Online</span>
             </a>
             <nav class="hidden lg:flex items-center gap-8 font-medium">
                 <a href="#network" class="nav-link">Rede Credenciada</a>
@@ -65,8 +84,8 @@
                 <a href="#faq" class="nav-link">Dúvidas</a>
             </nav>
             <div class="hidden lg:flex items-center gap-4">
-                <a href="#boleto-section" class="btn-outline">2ª Via de Boleto</a>
-                <a href="#" class="btn-primary">Começar Agora</a>
+                <a href="#boleto-section" class="btn-outline">Mensalidade em atraso</a>
+                <a href="#" class="btn-primary">Fale conosco</a>
             </div>
             <button id="menu-btn" class="lg:hidden p-2 text-slate-700" aria-expanded="false" aria-label="Abrir menu">
                 <i class="fas fa-bars text-2xl"></i>
@@ -97,40 +116,15 @@
                         Acesse uma nova experiência em plano de saúde. Agende consultas, veja seus exames e fale com especialistas na palma da sua mão.
                     </p>
                     <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#" class="btn-primary-lg">Quero um plano</a>
-                        <a href="#plans" class="btn-secondary-lg">Ver planos</a>
-                    </div>
-                    <p class="mt-6 text-sm text-slate-500 text-center lg:text-left">
-                        Já é cliente? <a href="#boleto-section" class="font-semibold text-emerald-600 hover:underline">Acesse a 2ª via do seu boleto aqui.</a>
+                        <a href="#" class="btn-primary-lg">Fale conosco <a href="#boleto-section" class="font-semibold text-emerald-600 hover:underline">Mensalidade em atraso.</a>
                     </p>
                 </div>
                 
                 <div class="relative lg:-mr-8">
-                     <img src="https://images.pexels.com/photos/8460157/pexels-photo-8460157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Médica sorrindo para o paciente" class="rounded-xl shadow-xl w-full h-full object-cover">
                 </div>
             </div>
         </section>
 
-        <section id="numbers" class="py-20 px-6 bg-white">
-            <div class="container mx-auto">
-                <div class="grid md:grid-cols-4 gap-8 text-center">
-                    <div class="border-t-2 border-emerald-500 pt-4">
-                        <p class="text-4xl font-extrabold text-emerald-600">+500 mil</p>
-                        <p class="mt-1 text-slate-500">Vidas Protegidas</p>
-                    </div>
-                    <div class="border-t-2 border-emerald-500 pt-4">
-                        <p class="text-4xl font-extrabold text-emerald-600">98%</p>
-                        <p class="mt-1 text-slate-500">de Satisfação</p>
-                    </div>
-                    <div class="border-t-2 border-emerald-500 pt-4">
-                        <p class="text-4xl font-extrabold text-emerald-600">+5.000</p>
-                        <p class="mt-1 text-slate-500">Especialistas na Rede</p>
-                    </div>
-                    <div class="border-t-2 border-emerald-500 pt-4">
-                        <p class="text-4xl font-extrabold text-emerald-600">24/7</p>
-                        <p class="mt-1 text-slate-500">Atendimento Digital</p>
-                    </div>
-                </div>
             </div>
         </section>
         
@@ -189,7 +183,7 @@
                         <h3 class="text-xl font-bold">Total</h3>
                         <p class="mt-1 text-slate-500">Cobertura completa e exclusiva.</p>
                         <ul class="text-slate-600 text-left my-6 flex-1 space-y-2"><li>✔ Tudo do plano Equilíbrio</li><li>✔ Hospitais premium</li><li>✔ Reembolso</li></ul>
-                         <a href="#" class="btn-outline mt-auto w-full">Saber Mais</a>
+                        <a href="#" class="btn-outline mt-auto w-full">Saber Mais</a>
                     </article>
                 </div>
             </div>
@@ -238,22 +232,20 @@
                         </div>
                     </div>
                     <div class="blog-card">
-    <img src="https://images.pexels.com/photos/3771045/pexels-photo-3771045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Mulher com fones de ouvido, relaxando" class="w-full h-48 object-cover">
-    <div class="p-6">
-        <span class="text-sm text-emerald-600 font-semibold">BEM-ESTAR</span>
-        <h3 class="mt-2 text-xl font-bold text-slate-800">Como cuidar da saúde mental no trabalho</h3>
-        <a href="artigo-bem-estar.html" class="mt-4 inline-block text-emerald-600 font-semibold hover:underline">Ler mais &rarr;</a>
-    </div>
-</div>
+                        <img src="https://images.pexels.com/photos/3771045/pexels-photo-3771045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Mulher com fones de ouvido, relaxando" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-emerald-600 font-semibold">BEM-ESTAR</span>
+                            <h3 class="mt-2 text-xl font-bold text-slate-800">Como cuidar da saúde mental no trabalho</h3>
+                            <a href="artigo-bem-estar.html" class="mt-4 inline-block text-emerald-600 font-semibold hover:underline">Ler mais &rarr;</a>
+                        </div>
+                    </div>
                     <div class="blog-card">
-    <img src="https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Médico conversando com um paciente" class="w-full h-48 object-cover">
-    <div class="p-6">
-        <span class="text-sm text-emerald-600 font-semibold">PREVENÇÃO</span>
-        <h3 class="mt-2 text-xl font-bold text-slate-800">A importância do check-up anual</h3>
-        <a href="artigo-prevencao.html" class="mt-4 inline-block text-emerald-600 font-semibold hover:underline">Ler mais &rarr;</a>
-    </div>
-</div>
-</div>
+                        <img src="https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Médico conversando com um paciente" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-emerald-600 font-semibold">PREVENÇÃO</span>
+                            <h3 class="mt-2 text-xl font-bold text-slate-800">A importância do check-up anual</h3>
+                            <a href="artigo-prevencao.html" class="mt-4 inline-block text-emerald-600 font-semibold hover:underline">Ler mais &rarr;</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -285,9 +277,9 @@
     
     <footer class="footer">
         <div class="container mx-auto text-center">
-            <h3 class="font-bold text-lg">HF Saúde Verde</h3>
+            <h3 class="font-bold text-lg">Portal de Antendimento</h3>
             <p class="mt-2 text-teal-200 text-sm max-w-md mx-auto">Em caso de dúvidas, entre em contato com nossa central: 4007-2001.</p>
-            <p class="mt-8 text-teal-300 text-xs">&copy; 2025 HF Saúde Verde. Todos os direitos reservados.</p>
+            <p class="mt-8 text-teal-300 text-xs">&copy; 2025 Portal de Antendimento. Todos os direitos reservados.</p>
         </div>
     </footer>
 
@@ -295,6 +287,14 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <div id="cookie-consent-banner" class="flex flex-col md:flex-row items-center justify-center gap-4 px-6 py-4">
+        <p class="text-sm">Utilizamos cookies para melhorar a sua experiência no nosso site. Ao continuar, você concorda com o uso de cookies.</p>
+        <div class="btn-container">
+            <button id="accept-cookies-btn" class="btn-primary-lg !px-6 !py-2.5">Aceitar</button>
+            <button id="reject-cookies-btn" class="btn-secondary-lg !px-6 !py-2.5">Rejeitar</button>
+        </div>
+    </div>
+    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const WHATSAPP_PHONE_NUMBER = "5511000000000"; 
@@ -320,6 +320,49 @@
             if (whatsappBoletoBtn) {
                 whatsappBoletoBtn.href = `https://wa.me/${WHATSAPP_PHONE_NUMBER}?text=${boletoMessage}`;
             }
+
+            // Funções de gerenciamento de cookies
+            function setCookie(name, value, days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                const expires = "expires=" + date.toUTCString();
+                document.cookie = name + "=" + value + ";" + expires + ";path=/;SameSite=Lax";
+            }
+
+            function getCookie(name) {
+                const cookieName = name + "=";
+                const decodedCookie = decodeURIComponent(document.cookie);
+                const ca = decodedCookie.split(';');
+                for(let i = 0; i <ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(cookieName) === 0) {
+                        return c.substring(cookieName.length, c.length);
+                    }
+                }
+                return "";
+            }
+
+            // Exibir/esconder o banner de cookies
+            const cookieConsentBanner = document.getElementById('cookie-consent-banner');
+            const acceptBtn = document.getElementById('accept-cookies-btn');
+            const rejectBtn = document.getElementById('reject-cookies-btn');
+
+            if (!getCookie("cookie_consent")) {
+                cookieConsentBanner.style.display = 'flex';
+            }
+
+            acceptBtn.addEventListener('click', () => {
+                setCookie("cookie_consent", "accepted", 365); // Expira em 365 dias
+                cookieConsentBanner.style.display = 'none';
+            });
+
+            rejectBtn.addEventListener('click', () => {
+                // Não definimos um cookie, apenas escondemos o banner
+                cookieConsentBanner.style.display = 'none';
+            });
         });
     </script>
 </body>
