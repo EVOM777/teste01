@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style type="text/tailwindcss">
@@ -48,8 +48,8 @@
                 <a href="index.html#faq" class="nav-link">Dúvidas</a>
             </nav>
             <div class="hidden lg:flex items-center gap-4">
-                <a href="index.html#boleto-section" class="btn-outline">Mensalidade em atraso</a>
-                <a href="#" class="btn-primary">Fale conosco</a>
+                <a href="https://wa.me/551151230692?text=Ol%C3%A1%2C+gostaria+de+solicitar+a+2%C2%AA+via+do+meu+boleto." class="btn-outline">Mensalidade em atraso</a>
+                <a href="https://wa.me/551151230692?text=Ol%C3%A1%2C+gostaria+de+iniciar+meu+atendimento." class="btn-primary">Fale conosco</a>
             </div>
             <button id="menu-btn" class="lg:hidden p-2 text-slate-700" aria-expanded="false" aria-label="Abrir menu">
                 <i class="fas fa-bars text-2xl"></i>
@@ -61,8 +61,8 @@
                 <a href="index.html#plans" class="nav-link">Planos</a>
                 <a href="index.html#faq" class="nav-link">Dúvidas</a>
                 <hr>
-                <a href="index.html#boleto-section" class="btn-outline text-center">2ª Via de Boleto</a>
-                <a href="#" class="btn-primary text-center">Começar Agora</a>
+                <a href="https://wa.me/551151230692?text=Ol%C3%A1%2C+gostaria+de+solicitar+a+2%C2%AA+via+do+meu+boleto." class="btn-outline text-center">2ª Via de Boleto</a>
+                <a href="https://wa.me/551151230692?text=Ol%C3%A1%2C+gostaria+de+iniciar+meu+atendimento." class="btn-primary text-center">Começar Agora</a>
             </div>
         </div>
     </header>
@@ -116,9 +116,9 @@
             <div class="pb-16 px-6">
                 <div class="max-w-3xl mx-auto flex items-center justify-center gap-4 border-t pt-8">
                     <p class="font-semibold text-slate-700">Gostou? Compartilhe!</p>
-                    <a href="#" class="w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-full text-xl hover:bg-blue-700 transition"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="w-10 h-10 flex items-center justify-center bg-green-500 text-white rounded-full text-xl hover:bg-green-600 transition"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#" class="w-10 h-10 flex items-center justify-center bg-blue-800 text-white rounded-full text-xl hover:bg-blue-900 transition"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=SEU_URL_DO_ARTIGO" target="_blank" class="w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-full text-xl hover:bg-blue-700 transition" aria-label="Compartilhar no Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/?text=Confira este artigo sobre a importância do check-up anual: SEU_URL_DO_ARTIGO" target="_blank" class="w-10 h-10 flex items-center justify-center bg-green-500 text-white rounded-full text-xl hover:bg-green-600 transition" aria-label="Compartilhar no WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=SEU_URL_DO_ARTIGO&title=A%20Importância%20do%20Check-up%20Anual" target="_blank" class="w-10 h-10 flex items-center justify-center bg-blue-800 text-white rounded-full text-xl hover:bg-blue-900 transition" aria-label="Compartilhar no LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
 
@@ -151,31 +151,41 @@
     <footer class="footer">
         <div class="container mx-auto text-center">
             <h3 class="font-bold text-lg">Portal de Atendimento</h3>
-            <p class="mt-2 text-teal-200 text-sm max-w-md mx-auto">Em caso de dúvidas, entre em contato com nossa central: 4007-2001.</p>
+            <p class="mt-2 text-teal-200 text-sm max-w-md mx-auto">Em caso de dúvidas, entre em contato com nossa central: +55 11 5123-0692.</p>
             <p class="mt-8 text-teal-300 text-xs">&copy; 2025 Portal de Atendimento. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <a id="whatsapp-float-btn" href="#" class="whatsapp-float" aria-label="Iniciar conversa no WhatsApp">
+    <a id="whatsapp-float-btn" href="https://wa.me/551151230692?text=Ol%C3%A1%2C+gostaria+de+iniciar+meu+atendimento." class="whatsapp-float" aria-label="Iniciar conversa no WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const WHATSAPP_PHONE_NUMBER = "5511000000000"; 
+            const WHATSAPP_PHONE_NUMBER = "551151230692"; 
+            const genericMessage = encodeURIComponent('Olá, gostaria de iniciar meu atendimento.');
             const menuBtn = document.getElementById("menu-btn");
             const mobileMenu = document.getElementById("mobile-menu");
+
             if (menuBtn) {
                 menuBtn.addEventListener("click", () => {
                     mobileMenu.classList.toggle("hidden");
                     menuBtn.setAttribute("aria-expanded", !mobileMenu.classList.contains("hidden"));
                 });
             }
-            const genericMessage = encodeURIComponent('Olá! Gostaria de mais informações sobre os planos.');
+
             const whatsappFloatBtn = document.getElementById('whatsapp-float-btn');
+            const primaryBtns = document.querySelectorAll('.btn-primary, .btn-primary-lg');
+            
             if (whatsappFloatBtn) {
                 whatsappFloatBtn.href = `https://wa.me/${WHATSAPP_PHONE_NUMBER}?text=${genericMessage}`;
             }
+
+            primaryBtns.forEach(btn => {
+                if (btn.textContent.includes('Fale conosco') || btn.textContent.includes('Começar Agora')) {
+                    btn.href = `https://wa.me/${WHATSAPP_PHONE_NUMBER}?text=${genericMessage}`;
+                }
+            });
         });
     </script>
 </body>
